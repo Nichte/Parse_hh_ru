@@ -19,9 +19,9 @@ def construct(jobs, city, job, base_url):
     middle_pay = summ//len(jobs)
     variation = str(minn)+' - '+str(maxx)
     if city == 1:
-        town = 'Москва'
+        town = 'Moscow'
     else:
-        town = 'Санкт-Петербург'
+        town = 'SaintP'
 
     prof = job
     if prof =='C%2B%2B':
@@ -32,9 +32,9 @@ def construct(jobs, city, job, base_url):
 
 
 def main():
-    conn = sq.connect('profession.db')
+    conn = sq.connect('professions.db')
     cur = conn.cursor()
-    cur.execute("CREATE TABLE profession ('Профессия' text, 'Город' text, 'Средняя з.п.' int, 'К-во вакансий' int , 'Варьирование з.п.' text)")
+    cur.execute("CREATE TABLE professions ('Profession' text, 'City' text, 'Average salary' int, 'Number of vacansy' int , 'Salary difference' text)")
     variaty = ['Python','1C','Java','Javascript','C%2B%2B']
 
     # Fill DB
@@ -49,7 +49,7 @@ def main():
                 base_url = link + str(page)
                 hh_parse(base_url, jobs)
             
-            cur.execute("INSERT INTO profession VALUES(?, ?, ?, ?, ?)",construct(jobs, city, job, base_url))
+            cur.execute("INSERT INTO professions VALUES(?, ?, ?, ?, ?)",construct(jobs, city, job, base_url))
             conn.commit()
     
     cur.close()

@@ -4,10 +4,10 @@ import sqlite3 as sq
 
 def draw():
     #Take files from DB
-    conn = sq.connect('profession.bd')
+    conn = sq.connect('professions.db')
     cur = conn.cursor()
     
-    cur.execute("SELECT * FROM profession")
+    cur.execute("SELECT * FROM professions")
     dates = cur.fetchall()
 
     #Draw first Histogamm (Average salary)
@@ -16,7 +16,7 @@ def draw():
     x=0
 
     for i in dates:
-        plt.bar(x, i[2], width = 20, label = i[0]+' '+i[1][:5]+'.')
+        plt.bar(x, i[2], width = 20, label = i[0]+' '+i[1]+'.')
         x+=20
 
     #Draw second Histogamm (Number of vacancies) 
@@ -24,7 +24,7 @@ def draw():
     pylab.title ("Number of vacancies")
     x=0
     for i in dates:
-        plt.bar(x, i[3], width = 20, label = i[0]+' '+i[1][:5]+'.')
+        plt.bar(x, i[3], width = 20, label = i[0]+' '+i[1]+'.')
         x+=20
 
     plt.legend(loc='upper right')
