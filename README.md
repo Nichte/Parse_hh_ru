@@ -1,5 +1,7 @@
 # Parse_hh_ru
 
+This project parse website hh.ru, make base date and make two histogramms on it
+
 The main programm is main.py.
 It runs all other programms, make base date and draw histogramms
  
