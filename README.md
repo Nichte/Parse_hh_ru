@@ -1,16 +1,16 @@
 # Parse_hh_ru
 
-This project parse website hh.ru, make base date and make two histogramms on it
+This project parse website hh.ru, make date base and make two histogramms on it
 
 The main programm is main.py.
-It runs all other programms, make base date and draw histogramms
+It runs all other programms, date base date and draw histogramms
  
 File parsing.py parse website hh.ru.
 It takes from html pages: profession, salary, number of vacansy, city
 
-File make_sql.py create base date from parsing.py
+File make_sql.py create date base from parsing.py
 
 File draw.py draw two histogramms (Average salary, Number of vacancy)
 
-If you don't have Base Date: uncomment main() in file main.py and run it
+If you don't have date base: uncomment main() in file main.py and run it
 
