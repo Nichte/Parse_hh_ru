@@ -1,10 +1,10 @@
 from make_sql import *
 from paint import draw
 
-#Make base date 
+#Make date base 
 #main()
 
-#Draw histogram from BD 
+#Draw histogram from DB 
 draw()
 
  

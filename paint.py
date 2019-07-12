@@ -3,7 +3,7 @@ import pylab
 import sqlite3 as sq
 
 def draw():
-    #Take files from BD
+    #Take files from DB
     conn = sq.connect('profession.bd')
     cur = conn.cursor()
     

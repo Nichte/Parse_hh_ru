@@ -32,12 +32,12 @@ def construct(jobs, city, job, base_url):
 
 
 def main():
-    conn = sq.connect('profession.bd')
+    conn = sq.connect('profession.db')
     cur = conn.cursor()
     cur.execute("CREATE TABLE profession ('Профессия' text, 'Город' text, 'Средняя з.п.' int, 'К-во вакансий' int , 'Варьирование з.п.' text)")
     variaty = ['Python','1C','Java','Javascript','C%2B%2B']
 
-    # Fill BD
+    # Fill DB
     for job in variaty:
         print(job)
         for city in range(1,3):
