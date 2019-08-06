@@ -1,6 +1,8 @@
 # Parse_hh_ru
 
-This project parse website hh.ru, make date base and make two histogramms on it
+(you have to have requests, bl4 and matplotlib for correct working)
+
+This project parse website hh.ru, make date base and create two histogramms on it
 
 The main programm is main.py.
 It runs all other programms, date base date and draw histogramms
